@@ -9,12 +9,11 @@ WORKDIR /app
 
 ADD Gemfile /app/Gemfile
 
-RUN sudo apt-get update -qq && \
-    sudo apt-get install -y build-essential \
+RUN apk --update install build-base \
     libpq-dev \
-    sudo \
-    gem install bundler:2.4.1
+    sudo
 
-RUN bundle install
+RUN gem install bundler:2.4.1 && \
+    bundle install
 
 ADD . /app
