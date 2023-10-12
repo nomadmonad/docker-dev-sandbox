@@ -10,6 +10,7 @@ WORKDIR /app
 ADD Gemfile /app/Gemfile
 
 RUN apk --update add build-base \
+    git \
     libpq-dev \
     sudo
 
