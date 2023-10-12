@@ -16,10 +16,10 @@ services:
       app_net:
         ipv4_address: '172.20.0.2'
 
-  backend:
-    container_name: backend
-    build: ./backend/
-    image: backend
+  rails_sandbox:
+    container_name: rails_sandbox
+    build: ./rails/
+    image: rails_sandbox
     command: bundle exec rails server -b 0.0.0.0
     tty: true
     stdin_open: true
