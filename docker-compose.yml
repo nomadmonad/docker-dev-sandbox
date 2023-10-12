@@ -24,7 +24,7 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./backend:/app:cached
+      - ./rails:/app:cached
       - bundle_data:/usr/local/bundle:cached
       - /app/vendor
       - /app/tmp
